@@ -1,0 +1,7 @@
+pt-BR:
+	
+	mdwa_contato:
+		assunto_administrador: "[Contato - Site] %{assunto}"
+		assunto_cliente: "%{nome}, obrigado por entrar em contato."
+		configuracao:
+			salvar_notice: "Configurações salvas com sucesso."
