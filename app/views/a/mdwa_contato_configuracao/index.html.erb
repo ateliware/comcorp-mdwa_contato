@@ -1,0 +1,45 @@
+<div id"mdwa_contato_configuracao_index">
+	<div class="page_header">
+		<%= t 'mdwa_contato.configuracao.index_title' %>
+	</div>
+
+	<div class="inside">
+
+		<%= form_tag a_mdwa_contato_configuracao_salvar_path do %>
+
+			<div class="yui3-g">
+
+				<div class="yui3-u-1-2">
+					<div class="field">
+						<%= label_tag :email_administrador, t('mdwa_contato.configuracao.email_administrador') %>
+						<%= text_field_tag :email_administrador, Settings['MDWA_CONTATO.email_administrador'] %>
+					</div>
+					<div class="field">
+						<%= label_tag :nome_site, t('mdwa_contato.configuracao.nome_site') %>
+						<%= text_field_tag :nome_site, Settings['MDWA_CONTATO.nome_site'] %>
+					</div>
+					<div class="field">
+						<%= label_tag :url_site, t('mdwa_contato.configuracao.url_site') %>
+						<%= text_field_tag :url_site, Settings['MDWA_CONTATO.url_site'] %>
+					</div>
+				</div>
+
+				<div class="yui3-u-1-2">
+					<div class="field">
+						<%= label_tag :assinatura_email, t('mdwa_contato.configuracao.assinatura_email') %>
+						<%= text_area_tag :assinatura_email, Settings['MDWA_CONTATO.assinatura_email'] %>
+					</div>
+				</div>
+
+			</div>
+
+				<div class="actions">
+					<%= link_to t('system.cancel_button'), '#', :class => :cancel %> 
+			    <%= submit_tag t('system.save_button'), :class => :button %>
+				</div>
+
+		<% end %>
+
+	</div>
+
+</div>

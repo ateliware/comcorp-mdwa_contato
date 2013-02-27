@@ -1,7 +1,64 @@
 pt-BR:
-	
-	mdwa_contato:
-		assunto_administrador: "[Contato - Site] %{assunto}"
-		assunto_cliente: "%{nome}, obrigado por entrar em contato."
-		configuracao:
-			salvar_notice: "Configurações salvas com sucesso."
+
+  mdwa_contato:
+    assunto_administrador: "[Contato - Site] %{assunto}"
+    assunto_cliente: "%{nome}, obrigado por entrar em contato."
+    configuracao:
+      salvar_notice: "Configurações salvas com sucesso."
+      index_title: "Configurações de contato"
+      email_administrador: "E-mails de administração (recebem os envios do site)"
+      nome_site: "Nome do site"
+      url_site: "URL do site"
+      assinatura_email: "Assinatura dos emails automáticos"
+
+
+  contatos_site:
+    notice:
+      create: "Contato enviado com sucesso."
+      update: "Contato salvo com sucesso."
+      destroy: "Contato removido."
+    title:
+      index: "Contatos"
+      show: "Contato"
+      new: "Novo Contato"
+      edit: "Editar Contato"
+    index:
+      add: 'Adicionar'
+      edit: 'Editar'
+      edit_label: 'Editar'
+      remove: 'Remover'
+      remove_label: 'Remover'
+      confirm_deletion: 'Você tem certeza?'
+      nome: "Nome"
+      email: "Email"
+      telefone: "Telefone"
+      assunto: "Assunto"
+      mensagem: "Mensagem"
+      id: "ID"
+      created_at: "Criado em"
+      updated_at: "Salvo em"
+    edit:
+      nome: "Nome"
+      email: "Email"
+      telefone: "Telefone"
+      assunto: "Assunto"
+      mensagem: "Mensagem"
+      id: "ID"
+      created_at: "Criado em"
+      updated_at: "Salvo em"
+    show:
+      nome: "Nome"
+      email: "Email"
+      telefone: "Telefone"
+      assunto: "Assunto"
+      mensagem: "Mensagem"
+      id: "ID"
+      created_at: "Criado em"
+      updated_at: "Salvo em"
+    frontend:
+      salvar_notice: "Contato enviado com sucesso."
+      nome: "Nome"
+      email: "Email"
+      telefone: "Telefone"
+      assunto: "Assunto"
+      mensagem: "Mensagem"

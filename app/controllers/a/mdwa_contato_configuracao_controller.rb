@@ -1,5 +1,8 @@
 class A::MdwaContatoConfiguracaoController < A::BackendController
 
+	skip_load_and_authorize_resource
+  skip_authorization_check
+
 	def index
 	end
 
@@ -11,7 +14,7 @@ class A::MdwaContatoConfiguracaoController < A::BackendController
 		Settings['MDWA_CONTATO.assinatura_email']			= params[:assinatura_email]
 
 		respond_to do |format|
-			format.html {redirect_to mdwa_contato_configuracao_index_path, notice: t('mdwa_contato.configuracao.salvar_notice')}
+			format.html {redirect_to a_mdwa_contato_configuracao_index_path, notice: t('mdwa_contato.configuracao.salvar_notice')}
 		end
 	end
 

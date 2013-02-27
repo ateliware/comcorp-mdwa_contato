@@ -12,6 +12,8 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Gerenciador de contatos MDWA}
   gem.homepage      = "https://github.com/qw3/mdwa_contato"
 
+  gem.add_dependency 'mdd', '>= 3.1.0'
+
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})

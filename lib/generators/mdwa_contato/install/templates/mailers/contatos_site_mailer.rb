@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 
-class ContatosSite < ActionMailer::Base
+class ContatosSiteMailer < ActionMailer::Base
   
   def avisar_administrador( contato_site )
     @contato_site = contato_site
