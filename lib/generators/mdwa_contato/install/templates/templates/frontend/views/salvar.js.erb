@@ -1,0 +1,5 @@
+<%% if @contato_site.errors.any? %>
+  $("#mdwa_error").html("<%%= j( render '/template/mdwa/crud_error', :object => @contato_site )%>");
+<%% else %>
+  $('body').append("<%%= j( render '/template/mdwa/notice', :notice => @system_notice )%>");
+<%% end %>

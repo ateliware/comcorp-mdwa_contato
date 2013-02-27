@@ -1,0 +1,16 @@
+<%- 
+@entity = MDWA::DSL.entity('ContatoSite') 
+@model = @entity.generator_model 
+-%>
+<%% if @<%= @model.singular_name %>.errors.any? %>
+	$("#mdwa_error").html("<%%= j( render '/template/mdwa/crud_error', :object => @<%= @model.singular_name %> )%>");
+<%% else %>
+	if( $('#<%= @model.plural_name %>_list').length > 0 ) {
+		$.fancybox.close(true);
+		$('#<%= @model.plural_name %>_filter_form').submit();
+	}
+	else if( $("#edit_<%= @model.plural_name %>").length > 0 ) {
+		$("#edit_<%= @model.plural_name %> .inside").html("<%%= j( render 'form' )%>");
+	}
+	$('body').append("<%%= j( render '/template/mdwa/notice', :notice => @system_notice )%>");
+<%% end %>

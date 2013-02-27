@@ -1,0 +1,6 @@
+<%- 
+@entity = MDWA::DSL.entity('ContatoSite') 
+@model = @entity.generator_model 
+-%>
+$('#<%= @model.plural_name %>_filter_form').submit();
+$('body').append("<%%= j( render '/template/mdwa/notice', :notice => @system_notice )%>");

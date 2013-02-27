@@ -1,0 +1,5 @@
+<%- 
+@entity = MDWA::DSL.entity('ContatoSite') 
+@model = @entity.generator_model 
+-%>
+$("#<%= @model.plural_name %>_list").html("<%%= j( render 'list' )%>");
