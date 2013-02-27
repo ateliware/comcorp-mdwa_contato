@@ -31,6 +31,10 @@ module MdwaContato
 		end
 
 		def geradores
+			generate 'mdwa:templates'
+			# copia os templates MDWA - admin e frontend
+			directory 'templates', MDWA::DSL::TEMPLATES_PATH + 'contato_site'
+			# roda a transformação
 			generate 'mdwa:transform ContatoSite --skip-locales'
 		end
 
@@ -50,13 +54,13 @@ module MdwaContato
 	    get 'mdwa_contato_configuracao/index' => 'mdwa_contato_configuracao#index', :as => 'mdwa_contato_configuracao_index'
 	    post 'mdwa_contato_configuracao/salvar' => 'mdwa_contato_configuracao#salvar', :as => 'mdwa_contato_configuracao_salvar'
 	  end
-	end"
-			route "
+	end
+
 	controller :contatos_site do
     get 'contato' => 'contatos_site#new', :as => 'contato'
     post 'contatos_site/salvar' => 'contatos_site#salvar', :as => 'contatos_site_salvar'
-  end"
-
+  end
+	"
 		end
 
 	end
